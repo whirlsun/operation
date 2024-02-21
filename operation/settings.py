@@ -76,6 +76,19 @@ WSGI_APPLICATION = 'operation.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'operation',
+        'USER': 'postgres',
+        'PASSWORD': 'twosun11',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+        'client_encoding': 'UTF8',
+        'default_transaction_isolation': 'read committed',
+    }
+}
+"""
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'operation',
         'USER': 'root',
@@ -84,8 +97,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
-
+""" 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
