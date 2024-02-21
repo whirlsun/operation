@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 li a {
     color: green;
 }
 body {
     background: white url("images/bg.jpg") no-repeat ;
+=======
+li a{
+    color: rgb(27, 105, 20);
+}
+body{
+  background-image: url("images/1.webp");
+>>>>>>> refs/remotes/origin/main
 }

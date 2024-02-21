@@ -6,11 +6,16 @@ import datetime
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
+<<<<<<< HEAD
     pub_date = models.DateTimeField("date published")
+=======
+    pub_date = models.DateTimeField('date published')
+>>>>>>> refs/remotes/origin/main
 
     def __str__(self) -> str:
         return self.question_text
 
+<<<<<<< HEAD
     @admin.display(
         boolean=True,
         ordering="pub_date",
@@ -20,6 +25,12 @@ class Question(models.Model):
         # return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
         now = timezone.now()
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
+=======
+    def was_published_recently(self):
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
+        # return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+>>>>>>> refs/remotes/origin/main
 
 
 class Choice(models.Model):

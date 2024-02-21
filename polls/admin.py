@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Question, Choice
 
+<<<<<<< HEAD
 # Register your models here.
 # admin.site.register(Question)
 
@@ -27,4 +28,7 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Question, QuestionAdmin)
+=======
+admin.site.register(Question)
+>>>>>>> refs/remotes/origin/main
 admin.site.register(Choice)
