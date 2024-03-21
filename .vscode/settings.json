@@ -2,5 +2,7 @@
     "django.snippets.exclude": [
         "cms",
         "wagtail"
-    ]
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic"
 }

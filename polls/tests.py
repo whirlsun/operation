@@ -14,11 +14,7 @@ class QuestionModelTests(TestCase):
         """
         time = timezone.now() + datetime.timedelta(days=30)
         future_question = Question(pub_date=time)
-<<<<<<< HEAD
         self.assertIs(future_question.was_pubished_recently(), False)
-=======
-        self.assertIs(future_question.was_published_recently(), False)
->>>>>>> refs/remotes/origin/main
 
     def test_was_published_recently_with_old_question(self):
         """
@@ -27,25 +23,14 @@ class QuestionModelTests(TestCase):
         """
         time = timezone.now() - datetime.timedelta(days=1, seconds=1)
         old_question = Question(pub_date=time)
-<<<<<<< HEAD
         self.assertIs(old_question.was_pubished_recently(), False)
 
-=======
-        self.assertIs(old_question.was_published_recently(), False)
->>>>>>> refs/remotes/origin/main
 
     def test_was_published_recently_with_recent_question(self):
         """
         was_published_recently() returns True for questions whose pub_date
         is within the last day.
         """
-<<<<<<< HEAD
         time = timezone.now() - datetime.timedelta(hours=23, minutes=59, seconds=59)
         recent_question = Question(pub_date=time)
         self.assertIs(recent_question.was_pubished_recently(), True)
-=======
-        time = timezone.now() - datetime.timedelta(
-            hours=23, minutes=59, seconds=59)
-        recent_question = Question(pub_date=time)
-        self.assertIs(recent_question.was_published_recently(), True)
->>>>>>> refs/remotes/origin/main

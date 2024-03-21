@@ -5,9 +5,11 @@ import datetime
 
 
 class Question(models.Model):
+
+    models.CharField()
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
-
+ 
     def __str__(self) -> str:
         return self.question_text
 
@@ -70,7 +72,7 @@ class Person(models.Model):
 
 
 class AskForLeave(models.Model):
-    def timeoffset():
+    def timeoffset(self):
         nowtime = datetime.datetime.now
         offset = datetime.timedelta(hours=4.0)
         # retime = (nowtime + offset).strftime("%Y-%m-%d %H:%M:%S")
