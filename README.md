@@ -8,3 +8,4 @@ dd
 \\\fff
 
 saaaaa
+Creating a new branch is quick AND simple.
